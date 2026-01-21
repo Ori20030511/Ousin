@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#047857">
     
-    <!-- === SEO & RÉFÉRENCEMENT AVANCÉ === -->
+    <!-- SEO & RÉFÉRENCEMENT AVANCÉ -->
     <title>Sen Consulting Services (SCS) - Ingénierie Sociale Urbaine & Conseil Territorial</title>
-    <meta name="description" content="SCS : Cabinet d'expertise en ingénierie sociale urbaine, décentralisation, audit, diagnostic organisationnel et marketing territorial à Saint-Louis, Sénégal. Accompagnement stratégique.">
-    <meta name="keywords" content="SCS, Sen Consulting Services, Ingénierie sociale urbaine, Développement local, Décentralisation, Saint-Louis Sénégal, Audit, Diagnostic organisationnel, Marketing territorial, Coopération décentralisée, Boun Daouda Soumare">
+    <meta name="description" content="SCS : Cabinet d'expertise en ingénierie sociale urbaine, décentralisation, audit et marketing territorial au Sénégal. Accompagnement stratégique des collectivités.">
+    <meta name="keywords" content="SCS, Sen Consulting Services, Ingénierie sociale urbaine, Sénégal, Saint-Louis, Audit, Marketing territorial, Boun Daouda Soumare">
     
+    <!-- Préchargement des polices (Performance DeepSeek) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Sen Consulting Services (SCS) - Expertise Territoriale">
-    <meta property="og:description" content="Cabinet spécialisé en accompagnement stratégique des collectivités territoriales et ONG au Sénégal.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800">
 
@@ -24,11 +29,10 @@
       "name": "Sen Consulting Services (SCS)",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rue de la Grande Mosquée, Médina Courses, Sor",
+        "streetAddress": "Médina Courses, Sor",
         "addressLocality": "Saint-Louis",
         "addressCountry": "SN"
       },
-      "geo": { "@type": "GeoCoordinates", "latitude": "16.0171", "longitude": "-16.4896" },
       "url": "https://votre-site.com",
       "telephone": "+2217860857XX"
     }
@@ -37,12 +41,11 @@
     <!-- RESSOURCES EXTERNES -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script>
-        (function() { emailjs.init("YOUR_PUBLIC_KEY"); })(); // À REMPLACER PAR TA CLÉ PUBLIQUE
+        (function() { emailjs.init("YOUR_PUBLIC_KEY"); })(); // Remplacer par la clé réelle
         tailwind.config = {
             theme: {
                 extend: {
@@ -57,33 +60,22 @@
     </script>
 
     <style>
-        /* Animation Reveal Text (Roll up) */
         .reveal-text { overflow: hidden; display: inline-block; }
         .reveal-text span { display: block; transform: translateY(100%); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .aos-animate .reveal-text span { transform: translateY(0); }
-
-        /* Glassmorphism Navigation */
         .nav-scrolled { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); color: #111827; padding: 0.75rem 0; }
         .nav-scrolled .logo-brand { color: #059669; }
-        .nav-scrolled .nav-link { color: #1f2937; }
-
-        /* Navigation Active Link */
         .nav-link.active { color: #10b981; border-bottom: 2px solid #10b981; }
-
-        /* Zoom Hero animation */
         @keyframes zoom { from { transform: scale(1); } to { transform: scale(1.15); } }
         .animate-zoom { animation: zoom 20s infinite alternate linear; }
-
-        /* Modales */
         .modal { transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 100; }
         .modal.hidden { opacity: 0; visibility: hidden; display: none; }
-        
         html { scroll-padding-top: 80px; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans overflow-x-hidden">
 
-    <!-- BARRE TRICOLORE SÉNÉGALAISE -->
+    <!-- BARRE TRICOLORE -->
     <div class="fixed top-0 w-full h-1 flex z-[80]">
         <div class="h-full w-1/3 bg-senegal-green"></div>
         <div class="h-full w-1/3 bg-senegal-yellow"></div>
@@ -91,32 +83,29 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 text-white">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 text-white font-bold">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex flex-col">
-                <!-- NOM UNIFORMISÉ -->
-                <span class="text-lg md:text-xl font-extrabold tracking-tight logo-brand transition-colors uppercase">
+            <div>
+                <span class="text-lg md:text-xl font-extrabold logo-brand uppercase tracking-tight">
                     Sen Consulting Services (SCS)
                 </span>
             </div>
-
-            <div class="hidden md:flex items-center space-x-8 text-[11px] font-bold uppercase tracking-widest">
+            <div class="hidden md:flex items-center space-x-8 text-[11px] uppercase tracking-widest">
                 <a href="#accueil" class="nav-link pb-1 transition-all">Accueil</a>
                 <a href="#services" class="nav-link pb-1 transition-all">Expertises</a>
                 <a href="#about" class="nav-link pb-1 transition-all">L'Agence</a>
                 <a href="#contact" aria-label="Contactez-nous" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full shadow-lg transition-transform hover:scale-105">Contact</a>
             </div>
-
-            <button id="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu" class="md:hidden text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars-staggered transition-all duration-300"></i>
+            <button id="mobile-menu-btn" onclick="toggleMenu()" aria-label="Bouton Menu" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered transition-all"></i>
             </button>
         </div>
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white text-gray-900 shadow-2xl p-6 flex flex-col space-y-4 font-bold border-t">
-            <a href="#accueil" onclick="toggleMenu()" class="py-3 border-b border-gray-100 uppercase text-xs">Accueil</a>
-            <a href="#services" onclick="toggleMenu()" class="py-3 border-b border-gray-100 uppercase text-xs">Expertises</a>
-            <a href="#about" onclick="toggleMenu()" class="py-3 border-b border-gray-100 uppercase text-xs">L'Agence</a>
-            <a href="#contact" onclick="toggleMenu()" class="text-emerald-600 uppercase text-xs">Contactez-nous</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white text-gray-900 shadow-2xl p-6 flex flex-col space-y-4 border-t">
+            <a href="#accueil" onclick="toggleMenu()" class="py-3 border-b">Accueil</a>
+            <a href="#services" onclick="toggleMenu()" class="py-3 border-b">Expertises</a>
+            <a href="#about" onclick="toggleMenu()" class="py-3 border-b">L'Agence</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-emerald-600">Contact</a>
         </div>
     </nav>
 
@@ -126,41 +115,152 @@
             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" alt="Cabinet SCS" class="w-full h-full object-cover scale-110 animate-zoom">
             <div class="absolute inset-0 bg-black/75"></div>
         </div>
-        
         <div class="relative z-20 text-center text-white px-4 max-w-4xl">
             <div data-aos="fade-down" class="inline-block px-4 py-1 border border-emerald-500/50 bg-emerald-500/10 rounded-full text-emerald-400 text-[10px] font-bold mb-6 tracking-widest uppercase italic">
                 Sen Consulting Services (SCS)
             </div>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tighter">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tighter italic">
                 <span class="reveal-text"><span>Accompagner la</span></span><br>
                 <span class="text-emerald-500 reveal-text" style="transition-delay: 0.2s;"><span>Performance</span></span> 
                 <span class="reveal-text" style="transition-delay: 0.4s;"><span>des Territoires</span></span>
             </h1>
-            <p data-aos="fade-up" data-aos-delay="600" class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed italic">
-                Plus de 25 ans d'expérience au service des collectivités, ONG et entreprises pour une ingénierie sociale urbaine durable.
+            <p data-aos="fade-up" data-aos-delay="600" class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light italic leading-relaxed">
+                Expertise en ingénierie sociale urbaine et développement durable au Sénégal.
             </p>
             <div data-aos="zoom-in" data-aos-delay="800" class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:-translate-y-1">Demander un devis</a>
+                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl transition-all">Demander un devis</a>
                 <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all">Nos expertises</a>
             </div>
-            <p data-aos="fade-up" data-aos-delay="1000" class="mt-8 text-emerald-400 font-bold uppercase text-[10px] tracking-[0.3em]">
-                Expertise Agréée &middot; Ancrage Local &middot; Saint-Louis, Sénégal
-            </p>
         </div>
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-emerald-500"><i class="fa-solid fa-chevron-down text-3xl"></i></div>
     </header>
 
-    <!-- MISSION & COMPTEUR (Page 1 PDF) -->
-    <section id="mission" class="py-24 bg-white relative overflow-hidden">
+    <!-- MISSION & COMPTEUR (PDF Page 1) -->
+    <section id="mission" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
                     <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 italic">Sen Consulting Services (SCS)</h2>
-                    <p class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 uppercase tracking-tighter leading-tight italic">L'excellence au service du changement.</p>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 uppercase tracking-tighter italic">L'excellence au service du changement.</h3>
                     <p class="text-gray-600 leading-relaxed mb-8 italic">
-                        La mission de <span class="font-bold text-gray-800 uppercase italic">Sen Consulting Services (SCS)</span> est d’accompagner les collectivités territoriales et organisations communautaires dans l’atteinte de leurs objectifs.
+                        La mission de <span class="font-bold text-gray-800 uppercase italic">Sen Consulting Services (SCS)</span> est d’accompagner les collectivités territoriales dans l’atteinte de leurs objectifs.
                     </p>
-                    <div class="space-y-4">
+                    <div class="flex flex-wrap gap-2 italic">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg font-bold text-[10px] uppercase shadow-sm">L'intégrité</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg font-bold text-[10px] uppercase shadow-sm">L'excellence</span>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg font-bold text-[10px] uppercase shadow-sm">Le partage</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div id="counter-trigger" class="bg-gray-50 p-8 rounded-3xl text-center border border-gray-100">
+                        <span class="text-5xl font-black text-emerald-600 mb-2 block tracking-tighter italic"><span id="years-counter">0</span>+</span>
+                        <span class="text-[10px] font-bold uppercase text-gray-400 tracking-widest">Années d'Expérience</span>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-3xl text-center text-white shadow-xl italic">
+                        <i class="fa-solid fa-award text-emerald-500 text-3xl mb-2"></i>
+                        <span class="text-[10px] font-bold uppercase text-gray-400 tracking-widest block leading-none">Cabinet SCS Agréé</span>
+                    </div>
+                    <div class="col-span-2 bg-emerald-600 p-8 rounded-3xl text-white flex justify-between items-center shadow-lg italic">
+                        <div class="text-left leading-none italic">
+                            <p class="text-[10px] font-bold uppercase opacity-80 mb-2 tracking-widest">Agréments</p>
+                            <p class="text-[11px] font-bold uppercase tracking-tighter">RC: SN.STL.2021.A.717 | NINEA: 0084664894</p>
+                        </div>
+                        <i class="fa-solid fa-file-shield text-4xl opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISES (Toutes les données techniques) -->
+    <section id="services" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-16 italic" data-aos="fade-up">Domaines d'intervention stratégiques</h2>
+            <div class="grid md:grid-cols-4 gap-6 text-left">
+                <!-- Card 1 -->
+                <article class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-8 border-transparent hover:border-emerald-600 group" data-aos="fade-up">
+                    <i class="fa-solid fa-chart-line text-emerald-600 text-3xl mb-6"></i>
+                    <h4 class="text-lg font-bold mb-4 italic uppercase leading-none tracking-tighter">Études & Évaluation</h4>
+                    <p class="text-gray-500 text-[11px] mb-6 leading-relaxed italic italic">Analyse des risques financiers et budgétisation territoriale.</p>
+                    <button onclick="openModal('modal-etudes')" aria-label="Voir détails Études" class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:underline italic">Voir détails <i class="fa-solid fa-plus-circle"></i></button>
+                </article>
+                <!-- Card 2 -->
+                <article class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-8 border-transparent hover:border-emerald-600 group" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-city text-emerald-600 text-3xl mb-6"></i>
+                    <h4 class="text-lg font-bold mb-4 italic uppercase leading-none tracking-tighter">Développement Local</h4>
+                    <p class="text-gray-500 text-[11px] mb-6 leading-relaxed italic italic">Fonds territoriaux et conseils de quartier (ADC).</p>
+                    <button onclick="openModal('modal-dev')" aria-label="Voir détails Dév Local" class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:underline italic">Voir détails <i class="fa-solid fa-plus-circle"></i></button>
+                </article>
+                <!-- Card 3 -->
+                <article class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-8 border-transparent hover:border-emerald-600 group" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-users-viewfinder text-emerald-600 text-3xl mb-6"></i>
+                    <h4 class="text-lg font-bold mb-4 italic uppercase leading-none tracking-tighter">Ingénierie Sociale</h4>
+                    <p class="text-gray-500 text-[11px] mb-6 leading-relaxed italic italic">Facilitation sociale et appropriation par la co-action.</p>
+                    <button onclick="openModal('modal-isu')" aria-label="Voir détails Ingénierie" class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:underline italic">Voir détails <i class="fa-solid fa-plus-circle"></i></button>
+                </article>
+                <!-- Card 4 -->
+                <article class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border-b-8 border-transparent hover:border-emerald-600 group" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-graduation-cap text-emerald-600 text-3xl mb-6"></i>
+                    <h4 class="text-lg font-bold mb-4 italic uppercase leading-none tracking-tighter">Formation & Coaching</h4>
+                    <p class="text-gray-500 text-[11px] mb-6 leading-relaxed italic italic">Marketing territorial et méthodes actives pratiques.</p>
+                    <button onclick="openModal('modal-form')" aria-label="Voir détails Formation" class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:underline italic">Voir détails <i class="fa-solid fa-plus-circle"></i></button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTEURS -->
+    <section class="py-20 bg-emerald-900 text-white overflow-hidden text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-emerald-400 font-bold uppercase tracking-widest text-[10px] mb-6">Champs d'Expertise Multisectorielle</h2>
+            <p class="text-2xl md:text-3xl font-bold mb-12 italic leading-tight" data-aos="fade-up">"Nous intervenons sur l’ensemble de la chaîne du développement territorial."</p>
+            <div class="flex flex-wrap justify-center gap-3 italic" data-aos="zoom-in">
+                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest">Audit & Diagnostic</span>
+                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest">Décentralisation</span>
+                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest">Climat & Environnement</span>
+                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest">Patrimoine</span>
+                <span class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest">Coopération</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALES DE DÉTAILS (CONTENU PDF COMPLET) -->
+    <!-- Modale 1 : Études -->
+    <div id="modal-etudes" class="modal hidden fixed inset-0 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-[2rem] p-10 relative shadow-2xl italic">
+            <button onclick="closeModal('modal-etudes')" aria-label="Fermer" class="absolute top-8 right-8 text-2xl text-gray-300 hover:text-emerald-600 transition-colors">&times;</button>
+            <h3 class="text-xl font-black text-emerald-600 mb-6 border-b pb-4 uppercase leading-none">Études, Gestion & Évaluation</h3>
+            <ul class="space-y-3 text-gray-700 text-sm mb-8 leading-relaxed">
+                <li>• Étude des besoins, sociale, technique et organisationnelle.</li>
+                <li>• Analyse financière et économique de projets territoriaux.</li>
+                <li>• Planification stratégique et opérationnelle.</li>
+                <li>• Analyse et prévention des risques d'exécution.</li>
+                <li>• Évaluation finale des performances.</li>
+            </ul>
+            <a href="#contact" onclick="closeModal('modal-etudes')" class="inline-block w-full text-center bg-emerald-600 text-white font-bold py-4 rounded-xl shadow-lg transition-transform hover:scale-105 uppercase text-[10px] tracking-widest italic">Demander un devis SCS</a>
+        </div>
+    </div>
+    <!-- Modale 2 : Dév Local -->
+    <div id="modal-dev" class="modal hidden fixed inset-0 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-[2rem] p-10 relative shadow-2xl italic">
+            <button onclick="closeModal('modal-dev')" aria-label="Fermer" class="absolute top-8 right-8 text-2xl text-gray-300 hover:text-emerald-600 transition-colors">&times;</button>
+            <h3 class="text-xl font-black text-emerald-600 mb-6 border-b pb-4 uppercase leading-none">Développement Local</h3>
+            <ul class="space-y-3 text-gray-700 text-sm mb-8 leading-relaxed">
+                <li>• Mise en place de conseils de quartier et cadres de concertation.</li>
+                <li>• Gestion des Fonds de développement local (FDL).</li>
+                <li>• Conseil municipal des enfants.</li>
+                <li>• Élaboration de plans de développement zonaux.</li>
+                <li>• Suivi et appui méthodologique.</li>
+            </ul>
+            <a href="#contact" onclick="closeModal('modal-dev')" class="inline-block w-full text-center bg-emerald-600 text-white font-bold py-4 rounded-xl shadow-lg transition-transform hover:scale-105 uppercase text-[10px] tracking-widest italic">Discuter de mon projet</a>
+        </div>
+    </div>
+    <!-- Modale 3 : ISU -->
+    <div id="modal-isu" class="modal hidden fixed inset-0 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-[2rem] p-10 relative shadow-2xl italic">
+            <button onclick="closeModal('modal-isu')" aria-label="Fermer" class="absolute top-8 right-8 text-2xl text-gray-300 hover:text-emerald-600 transition-colors">&times;</button>
+            <h3 class="text-xl font-black text-emerald-600 mb-6 border-b pb-4 uppercase leading-none">Ingénierie Sociale Urbaine</h3>
+            <ul class="space-y-3 text-gray-700 text-sm mb-8 leading-relaxss="space-y-4">
                         <p class="font-bold text-gray-900 uppercase text-[10px] tracking-widest mb-4 italic text-emerald-600">Cinq valeurs à partager :</p>
                         <div class="flex flex-wrap gap-3">
                             <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg font-bold text-[10px] uppercase shadow-sm italic">L'intégrité</span>
