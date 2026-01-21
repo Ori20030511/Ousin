@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sen Consulting Services (SCS) - Expertise & Conseil</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 50: '#ecfdf5', 600: '#059669', 700: '#047857' },
+                        senegal: { green: '#00853f', yellow: '#fdef42', red: '#e31b23' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: {
+                        'slow-fade': 'fadeIn 2s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Effet "Roll Up" personnalisé pour le texte */
+        .reveal-text {
+            overflow: hidden;
+            display: inline-block;
+        }
+        .reveal-text span {
+            display: block;
+            transform: translateY(100%);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .aos-animate .reveal-text span {
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism pour la nav au scroll */
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            color: #111827;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .nav-scrolled .nav-link { color: #1f2937; }
+        .nav-scrolled .logo-text { color: #059669; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans overflow-x-hidden">
+
+    <!-- BARRE DE COULEURS SÉNÉGALAISE -->
+    <div class="fixed top-0 w-full h-1 flex z-[60]">
+        <div class="h-full w-1/3 bg-senegal-green"></div>
+        <div class="h-full w-1/3 bg-senegal-yellow"></div>
+        <div class="h-full w-1/3 bg-senegal-red"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-2xl font-extrabold tracking-tighter logo-text transition-colors">
+                    <span class="text-emerald-500">SEN</span> CONSULTING
+                </span>
+                <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-80">Services (SCS)</span>
+            </div>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider">
+                <a href="#accueil" class="nav-link hover:text-emerald-400 transition-colors">Accueil</a>
+                <a href="#services" class="nav-link hover:text-emerald-400 transition-colors">Services</a>
+                <a href="#about" class="nav-link hover:text-emerald-400 transition-colors">À propos</a>
+                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full transition-all hover:scale-105 shadow-lg">Contact</a>
+            </div>
+
+            <!-- Bouton Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white text-gray-900 shadow-2xl p-6 flex flex-col space-y-4 font-bold border-t border-gray-100">
+            <a href="#accueil" class="mobile-link py-2 border-b border-gray-50">Accueil</a>
+            <a href="#services" class="mobile-link py-2 border-b border-gray-50">Services</a>
+            <a href="#about" class="mobile-link py-2 border-b border-gray-50">À propos</a>
+            <a href="#contact" class="text-emerald-600 pt-2">Contactez-nous</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Zoom Animation -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
+                 alt="Bureau SCS" 
+                 class="w-full h-full object-cover scale-110 animate-[zoom_20s_infinite_alternate]">
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-4xl">
+            <div data-aos="fade-down" data-aos-duration="1000" class="inline-block px-4 py-1 border border-emerald-500/50 bg-emerald-500/10 rounded-full text-emerald-400 text-sm font-bold mb-6">
+                Expertise & Conseil depuis 2021
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+                <span class="reveal-text"><span>Accompagner la</span></span><br>
+                <span class="text-emerald-500 reveal-text" style="transition-delay: 0.2s;"><span>Performance</span></span> 
+                <span class="reveal-text" style="transition-delay: 0.4s;"><span>des Territoires</span></span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="600" class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                SCS accompagne les collectivités, entreprises et ONG dans l'ingénierie sociale urbaine au Sénégal.
+            </p>
+            <div data-aos="zoom-in" data-aos-delay="800" class="flex flex-col sm:row justify-center gap-4">
+                <a href="#services" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:translate-y-[-4px] shadow-xl">
+                    Nos Services
+                </a>
+                <a href="#about" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+                    Notre Mission
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce text-emerald-500">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- SECTION MISSION -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-4">Qui sommes-nous ?</h2>
+                <p class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+                    SCS est un cabinet d’études dont la mission est d'accompagner les acteurs du changement vers l'excellence.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 mt-20">
+                <!-- Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="group text-center p-8 rounded-2xl bg-gray-50 border-b-4 border-emerald-600 shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:rotate-[360deg] transition-transform duration-700">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Ancrage Local</h3>
+                    <p class="text-gray-600 text-sm">Parfaite connaissance du Sénégal, particulièrement Saint-Louis.</p>
+                </div>
+                <!-- Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="group text-center p-8 rounded-2xl bg-gray-50 border-b-4 border-emerald-600 shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:rotate-[360deg] transition-transform duration-700">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Haute Expertise</h3>
+                    <p class="text-gray-600 text-sm">Une démarche constructive basée sur 25 ans d'expérience.</p>
+                </div>
+                <!-- Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="group text-center p-8 rounded-2xl bg-gray-50 border-b-4 border-emerald-600 shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:rotate-[360deg] transition-transform duration-700">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Disponibilité</h3>
+                    <p class="text-gray-600 text-sm">Un accompagnement de proximité pour des résultats optimaux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4" data-aos="fade-right">
+                <div class="max-w-2xl">
+                    <h2 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-4">Domaines d'intervention</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900">Des solutions stratégiques</h3>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div data-aos="zoom-in-up" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group border-t-4 border-transparent hover:border-emerald-600">
+                    <div class="text-emerald-600 text-4xl mb-6 group-hover:scale-110 group-hover:translate-x-2 transition-transform inline-block">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Études & Évaluation</h4>
+                    <p class="text-gray-600 text-sm mb-6">Suivi et évaluation de projets avec analyse financière et planification.</p>
+                    <div class="h-1 w-0 group-hover:w-full bg-emerald-500 transition-all duration-500"></div>
+                </div>
+
+                <!-- Service 2 -->
+                <div data-aos="zoom-in-up" data-aos-delay="100" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group border-t-4 border-transparent hover:border-emerald-600">
+                    <div class="text-emerald-600 text-4xl mb-6 group-hover:scale-110 group-hover:translate-x-2 transition-transform inline-block">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Facilitation Sociale</h4>
+                    <p class="text-gray-600 text-sm mb-6">Promotion de la co-action et ingénierie sociale urbaine.</p>
+                    <div class="h-1 w-0 group-hover:w-full bg-emerald-500 transition-all duration-500"></div>
+                </div>
+
+                <!-- Service 3 -->
+                <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group border-t-4 border-transparent hover:border-emerald-600">
+                    <div class="text-emerald-600 text-4xl mb-6 group-hover:scale-110 group-hover:translate-x-2 transition-transform inline-block">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Développement Local</h4>
+                    <p class="text-gray-600 text-sm mb-6">Mise en place de fonds de développement territorial.</p>
+                    <div class="h-1 w-0 group-hover:w-full bg-emerald-500 transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FONDATEUR -->
+    <section id="about" class="py-24 bg-gray-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/3 relative" data-aos="fade-right">
+                    <div class="absolute -inset-4 border-2 border-emerald-500 rounded-3xl translate-x-4 translate-y-4 opacity-30"></div>
+                    <img src="https://picsum.photos/id/443/800/1000" alt="Boun Daouda SOUMARE" class="relative z-10 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                    <div class="absolute bottom-6 -right-6 z-20 bg-emerald-600 p-6 rounded-xl shadow-xl" data-aos="zoom-in" data-aos-delay="400">
+                        <p class="font-bold text-lg leading-none italic text-white">M. Boun D. SOUMARE</p>
+                        <p class="text-xs uppercase font-bold text-emerald-200 mt-2">Fondateur & DG</p>
+                    </div>
+                </div>
+                <div class="md:w-2/3" data-aos="fade-left">
+                    <h2 class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-4">Notre Leader</h2>
+                    <h3 class="text-4xl font-extrabold mb-8 leading-tight">Une expertise de haut niveau</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6 italic">
+                        "Nous croyons en un développement urbain qui place l'humain au centre de chaque décision stratégique."
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-10">
+                        <div class="border-l-4 border-emerald-500 pl-4 transition-all hover:bg-emerald-500/5 py-2">
+                            <p class="text-4xl font-extrabold text-white">25+</p>
+                            <p class="text-xs uppercase font-bold text-gray-500">Années d'Expérience</p>
+                        </div>
+                        <div class="border-l-4 border-emerald-500 pl-4 transition-all hover:bg-emerald-500/5 py-2">
+                            <p class="text-4xl font-extrabold text-white">150+</p>
+                            <p class="text-xs uppercase font-bold text-gray-500">Projets Pilotés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION (Completed) -->
+    <section id="contact" class="py-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row" data-aos="flip-up">
+                <div class="md:w-1/2 bg-emerald-700 p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-8">Contactez-nous</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-emerald-500 transition-colors">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-xl">+221 78 608 57</span>
+                        </div>
+                        <div class="flex items-center space-x-4 group">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-emerald-500 transition-colors">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span>senconsulting@outlook.fr</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nom" class="w-full p-4 bg-gray-50 border rounded-xl outline-none focus:border-emerald-500 transition-all">
+                        <input type="email" placeholder="Email" class="w-full p-4 bg-gray-50 border rounded-xl outline-none focus:border-emerald-500 transition-all">
+                        <textarea placeholder="Message" rows="4" class="w-full p-4 bg-gray-50 border rounded-xl outline-none focus:border-emerald-500 transition-all"></textarea>
+                        <button class="w-full bg-emerald-600 text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition-all transform hover:scale-[1.02]">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 py-12 text-center text-sm">
+        <p>&copy; 2024 Sen Consulting Services. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialisation de AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+
+        // Gestion du Scroll de la Navbar
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.add('animate-slow-fade');
+        });
+
+        // Fermer le menu au clic sur un lien mobile
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
+
+    <style>
+        /* Animation de zoom continue pour le hero background */
+        @keyframes zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
+        }
+    </style>
+</body>
+</html>
